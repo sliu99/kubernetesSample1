@@ -21,4 +21,11 @@ mvn clean
 */
 
 
-Case 3: use shell script to build
+Case 3: use sh shell script to build
+Command: /bin/sh
+Arguments: scriptName.sh
+
+
+Case 4: use bash shell script to build
+Command: /bin/bash
+Arguments: scriptName2.bash
