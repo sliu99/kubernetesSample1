@@ -1,0 +1,24 @@
+
+This app builds a gocd pipeline that build the app.
+
+Case 1: use command to build
+Job Name: clean_and_package
+Task Type: Other
+Command: mvn
+Target: compile
+Arguments: package
+
+
+Case 2: use shell command to build
+Command: /bin/bash
+Arguments:
+-c
+mvn clean package
+/*
+Before test, login as root
+cd /var/lib/go-agent/pipelines/kubernetesSample1
+mvn clean
+*/
+
+
+Case 3: use shell script to build

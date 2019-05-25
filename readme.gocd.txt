@@ -62,5 +62,43 @@ Job Name: clean_and_package
 Task Type: Other
 Command: mvn
 Target: compile
-Arguments: clean package
+Arguments: package
+
+
+
+BUILD FAILED
+No compiler is provided in this environment. Perhaps you are running on a JRE rather than a JDK?
+
+Fix:
+https://stackoverflow.com/questions/30391626/gocd-agent-does-not-recognize-java-home-environment-variable
+The agent has a profile it uses to execute jobs and tasks. The default location is: /etc/default/go-agent Add
+export JAVA_HOME=/home/sliu/appenv/jdk/
+
+//set Environment, does not work, cocd agent only recognize standard PATH, but not mine in appenv
+$PATH=$PATH:/home/sliu/appenv/maven/bin
+
+
+target (with jar files) is created at /var/lib/go-agent/pipelines/kubernetesSample1
+
+======================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
