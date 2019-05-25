@@ -60,7 +60,7 @@ Stage Name: Build
 
 Job Name: clean_and_package
 Task Type: Other
-Command: maven
+Command: mvn
 Target: compile
 Arguments: clean package
 
