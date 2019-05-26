@@ -97,6 +97,16 @@ bounce vm
 
 
 
+When running run_docker_container.sh in gocd, get error:
+the input device is not a TTY
+
+//Error “The input device is not a TTY”
+https://stackoverflow.com/questions/43099116/error-the-input-device-is-not-a-tty
+Remove the -it from your cli to make it non interactive and remove the TTY.
+
+
+
+
 
 
 
