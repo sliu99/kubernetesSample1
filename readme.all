@@ -23,9 +23,19 @@ mvn clean
 
 Case 3: use sh shell script to build
 Command: /bin/sh
-Arguments: scriptName.sh
+Arguments: maven_build.sh
 
 
 Case 4: use bash shell script to build
 Command: /bin/bash
-Arguments: scriptName2.bash
+Arguments: maven_build2.bash
+
+
+Case 5: use sh shell script to build image
+Command: /bin/sh
+Arguments: build_docker_image.sh
+
+
+Case 6: use sh shell script to run container
+Command: /bin/sh
+Arguments: build_docker_container.sh
