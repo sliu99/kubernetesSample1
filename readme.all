@@ -36,6 +36,28 @@ Command: /bin/sh
 Arguments: build_docker_image.sh
 
 
-Case 6: use sh shell script to run container
+Case 6: use sh shell script to run container (building image and running container in the same stage.)
 Command: /bin/sh
 Arguments: run_docker_container.sh
+
+pipeline runs seems not finished(in yellow) because the container started and not finished, maybe need to run in background)
+curl http://localhost:8080/books  //works
+ifconfig: get 192.168.40.135
+On windows Chrome browser, http://192.168.40.135:8080/books,  works
+
+docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
+79fc59d9d8dc        rest-example        "/bin/sh -c 'java -j…"   16 minutes ago      Up 16 minutes       0.0.0.0:8080->8080/tcp   rest-example-container
+
+//to stop
+docker stop rest-example-container
+
+pipeline status shows failed with task status: failed, took: 18m 29.80s, exited: 143
+
+
+
+
+Case 7: use sh shell script to run container in background (building image and running container in the same stage.)
+Command: /bin/sh
+Arguments: run_docker_container_in_background.sh
+
