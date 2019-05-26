@@ -38,4 +38,4 @@ Arguments: build_docker_image.sh
 
 Case 6: use sh shell script to run container
 Command: /bin/sh
-Arguments: build_docker_container.sh
+Arguments: run_docker_container.sh

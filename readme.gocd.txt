@@ -82,8 +82,17 @@ target (with jar files) is created at /var/lib/go-agent/pipelines/kubernetesSamp
 
 ======================================================
 
+When running build_docker_image.sh, get error:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock
 
 
+search for "Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock"
+
+//Solving Docker permission denied while trying to connect to the Docker daemon socket
+https://techoverflow.net/2017/03/01/solving-docker-permission-denied-while-trying-to-connect-to-the-docker-daemon-socket/
+sudo usermod -a -G docker sliu
+sudo usermod -a -G docker go
+bounce vm
 
 
 
